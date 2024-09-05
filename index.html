@@ -10,18 +10,18 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Portfolio</div>
+      <div class="logo">My Portfolio</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="compl_color"><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">Portfolio</div>
+      <div class="logo">My Portfolio</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -32,7 +32,9 @@
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li class="compl_color">
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
+          </li>
         </div>
       </div>
     </nav>
@@ -47,7 +49,7 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
+            onclick="window.open('./assets/EBENEZER AYITEY- Curriculum Vitae.pdf')"
           >
             Download CV
           </button>
@@ -102,7 +104,7 @@
                 alt="Experience icon"
                 class="icon"
               />
-              <h3>Experience</h3>
+              <h3 class="compl_color">Experience</h3>
               <p>2+ years <br />Software Developer</p>
             </div>
             <div class="details-container">
@@ -111,7 +113,7 @@
                 alt="Education icon"
                 class="icon"
               />
-              <h3>Education</h3>
+              <h3 class="compl_color">Education</h3>
               <p>
                 B.Sc. Computer Science <br />
                 Kwame Nkrumah University of Science and Technology
@@ -119,20 +121,35 @@
             </div>
           </div>
           <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
+            <p class="quote-text">
+              <img
+                src="./assets/quote_start.svg"
+                alt="Quote icon"
+                class="icon-quote quote-start compl_color"
+              />
+              I am a dedicated and collaborative individual with a strong
+              background in software development and research. With hands-on
+              experience in mobile application development using Flutter,
+              Firebase, and other cutting-edge technologies , I have
+              successfully led teams and contributed to multiple projects,
+              consistently delivering results. My experience as a project leader
+              and research assistant has sharpened my ability to work
+              effectively in teams, ensuring smooth collaboration and mutual
+              success. I am eager to bring my skills in coding, technical
+              support, and problem-solving to any team environment, working
+              toward achieving common goals.
+              <img
+                src="./assets/quote_end.svg"
+                alt="Quote icon"
+                class="icon-quote quote-end"
+              />
             </p>
           </div>
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
+        src="./assets/angles_down.svg"
+        alt="Arrow icon grey_color"
         class="icon arrow"
         onclick="location.href='./#experience'"
       />
@@ -240,6 +257,17 @@
                   <p>Intermediate</p>
                 </div>
               </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
             </div>
           </div>
           <div class="details-container">
@@ -293,8 +321,61 @@
           </div>
         </div>
       </div>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Other Tools</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Figma</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Adobe XD</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
       <img
-        src="./assets/arrow.png"
+        src="./assets/angles_down.svg"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#projects'"
@@ -305,15 +386,15 @@
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
         <div class="details-container color-container">
-          <div class="article-container">
+          <div class="article-container1">
             <img
               src="./assets/project-3.png"
               alt="Project 1"
               class="project-img"
             />
           </div>
-          <h2 class="experience-sub-title project-title">Project One</h2>
-          <div class="btn-container">
+          <h2 class="experience-sub-title project-title">HomeCareX</h2>
+          <div class="btn-container grey_color">
             <button
               class="btn btn-color-2 project-btn"
               onclick="window.open('https://github.com/pjaiit365/handyman_app/')"
@@ -321,17 +402,13 @@
               <img class="btn-proj" src="./assets/github.png" alt="GitHub" />
               Github
             </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="window.open('https://github.com/pjaiit365/handyman_app/')"
-            >
-              <img class="btn-proj" src="./assets/view.png" alt="GitHub" />
-
+            <button class="btn btn-color-2 project-btn live-demo-btn">
+              <img class="btn-proj" src="./assets/view.png" alt="Live Demo" />
               Live Demo
             </button>
           </div>
         </div>
-        <br />
+        <!-- <br /> -->
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="article-container">
@@ -341,11 +418,11 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">KNUST Scan</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/pjaiit365/handyman_app/')"
+                onclick="window.open('https://github.com/pjaiit365/knust_scan')"
               >
                 <img class="btn-proj" src="./assets/github.png" alt="GitHub" />
                 Github
@@ -382,7 +459,6 @@
                 onclick="window.open('https://github.com/pjaiit365/handyman_app/')"
               >
                 <img class="btn-proj" src="./assets/view.png" alt="GitHub" />
-
                 Live Demo
               </button>
             </div>
@@ -390,7 +466,7 @@
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="./assets/angles_down.svg"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#contact'"

@@ -24,13 +24,90 @@ p {
 a,
 .btn {
   transition: all 300ms ease;
+  font-size: 0.9em;
+  margin-bottom: 1rem;
 }
+
+
+/* Alert Dialog Box */
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9998;
+}
+
+body.blurred {
+  filter: blur(5px); /* Adjust the blur amount */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.dialog-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999; /* Ensure it's on top of the cover */
+}
+
+/* Dialog box content */
+.dialog-content {
+  text-align: center;
+}
+
+.dialog-content button {
+  margin: 10px;
+}
+.dialog-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.dialog-content button {
+  align-items: center;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#confirm-btn {
+  background-color: #c97f39;
+  color: white;
+}
+
+#cancel-btn {
+  background-color: #ccc;
+}
+
+
 
 /* DESKTOP NAV */
 
 nav,
 .nav-links {
   display: flex;
+}
+
+.text-container {
+  position: relative;
+  width: 80%; /* Adjust as necessary */
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
 }
 
 nav {
@@ -105,6 +182,29 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+.menu-links-gold {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+
+.menu-links-gold a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #c97f39;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+
 .menu-links a {
   display: block;
   padding: 10px;
@@ -115,10 +215,16 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+.menu-links-gold li {
+  list-style: none;
+}
 .menu-links li {
   list-style: none;
 }
 
+.menu-links-gold.open {
+  max-height: 300px;
+}
 .menu-links.open {
   max-height: 300px;
 }
@@ -147,10 +253,9 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  min-height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
 }
 
 .section-container {
@@ -202,6 +307,13 @@ section {
   color: #C97F39;
 }
 
+.grey_color {
+  color: #555555;
+}
+.compl_color a {
+  color: #C97F39;
+}
+
 #socials-container {
   display: flex;
   justify-content: center;
@@ -216,6 +328,31 @@ section {
   cursor: pointer;
   height: 2rem;
   color: green;
+}
+
+.icon-quote {
+  width: 35px; /* Adjust size of quote icons */
+  height: auto;
+  vertical-align: top; /* Aligns icon with text */
+}
+
+.quote-start {
+  margin-right: 10px; /* Space between start quote and text */
+  float: left; /* Aligns start quote to the left */
+}
+
+.quote-end {
+  margin-left: 10px; /* Space between end quote and text */
+  float: right; /* Aligns end quote to the right */
+}
+
+.quote-text {
+  display: inline-block;
+  position: relative;
+  padding: 0 20px; /* Space for visual padding inside the block */
+  box-sizing: border-box;
+  font-size: 16px; /* Optional: specify text size */
+  line-height: 1.6; /* Adjust the line height for readability */
 }
 
 /* BUTTONS */
@@ -238,6 +375,8 @@ section {
   height: 1rem;
   align-items: center;
   justify-content: center;
+  width: 20px; /* Adjust size of the icon */
+  height: 20px;
 
 }
 
@@ -309,6 +448,7 @@ section {
   right: -5rem;
   bottom: 2.5rem;
   color: #3983C9;
+  opacity: 0.7;
 }
 
 .details-container {
@@ -360,10 +500,11 @@ section {
   justify-content: space-around;
 }
 
+
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
+  justify-content: left;
   gap: 0.5rem;
 }
 
@@ -375,6 +516,7 @@ article .icon {
 
 #projects {
   position: relative;
+  z-index: 1;
 }
 
 .color-container {
@@ -383,9 +525,12 @@ article .icon {
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  max-width: 550px; /* Set a max width to prevent the images from being too large */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
 }
 
 .project-title {
@@ -396,6 +541,11 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Optional: Centers horizontally too */
+  gap: 8px; /* Adjust the space between the icon and the text */
+  padding: 10px 20px; /* Optional: Adjust padding if needed */
 }
 
 /* CONTACT */
@@ -404,7 +554,9 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  min-height: 70vh;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-info-upper-container {
