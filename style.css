@@ -32,6 +32,8 @@ a,
 /* Alert Dialog Box */
 
 
+/* Overlay style */
+/* Overlay for the blurry background */
 .overlay {
   position: fixed;
   top: 0;
@@ -39,14 +41,16 @@ a,
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 9998;
+  z-index: 9998; /* Ensure the overlay is on top */
 }
 
+/* Blur effect for the body when dialog is active */
 body.blurred {
-  filter: blur(5px); /* Adjust the blur amount */
-  overflow: hidden; /* Prevent scrolling */
+  filter: blur(5px); /* Apply the blur effect */
+  overflow: hidden; /* Prevent scrolling when blurred */
 }
 
+/* Dialog box style */
 .dialog-box {
   position: fixed;
   top: 50%;
@@ -57,7 +61,8 @@ body.blurred {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 9999; /* Ensure it's on top of the cover */
+  z-index: 9999; /* Ensure the dialog box is above the overlay */
+  display: block;
 }
 
 /* Dialog box content */
@@ -65,17 +70,13 @@ body.blurred {
   text-align: center;
 }
 
-.dialog-content button {
-  margin: 10px;
-}
 .dialog-content p {
   margin-bottom: 20px;
   font-size: 16px;
 }
 
 .dialog-content button {
-  align-items: center;
-  margin-right: 10px;
+  margin: 10px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -91,6 +92,32 @@ body.blurred {
   background-color: #ccc;
 }
 
+.swal-centered-buttons .swal-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.swal-button-compl {
+  background-color: #c97f39;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.swal-button-prim {
+  background-color: #3983C9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
 
 /* DESKTOP NAV */
