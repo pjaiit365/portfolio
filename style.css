@@ -495,8 +495,8 @@ section {
 
 .section__pic-container {
   border-radius: 50%; /* Makes the image circular */
-  height: 400px;
-  width: 400px;
+  max-height: 400px;
+  max-width: 400px;
   margin: auto 0;
   object-fit: cover;
   overflow: hidden; /* Ensures the image stays within the circle */
@@ -511,8 +511,8 @@ section {
 
 .section__pic-container_about {
   border-radius: 10%; /* Makes the image circular */
-  height: 350px;
-  width: 350px;
+  max-height: 350px;
+  max-width: 350px;
   margin: auto 0;
   object-fit: cover;
   overflow: hidden; /* Ensures the image stays within the circle */
