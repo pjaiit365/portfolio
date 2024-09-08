@@ -1,6 +1,3 @@
-/* Base styles for larger screens */
-
-/* Medium to Large Screens (1400px and below) */
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -15,7 +12,6 @@
   }
 }
 
-/* Tablets and Smaller Screens (1200px and below) */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
@@ -46,17 +42,22 @@
     height: 275px;
     margin: 0 auto 2rem;
   }
+
   .section__pic-container_about {
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
   }
+
   .about-containers {
     margin-top: 0;
   }
+
+  .menu-links a{
+    font-size: 1.25rem;
+  }
 }
 
-/* Mobile Devices (600px and below) */
 @media screen and (max-width: 600px) {
   #contact,
   footer {
@@ -95,9 +96,17 @@
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+
   }
   .section__pic-container {
-    width: auto;
+  
+    width: 46vw;
+    height: 46vw;
+    justify-content: center;
+  }
+
+  .section__pic-container_about {
+    width: 46vw;
     height: 46vw;
     justify-content: center;
   }
@@ -110,29 +119,16 @@
   .text-container {
     text-align: justify;
   }
-}
 
-/* Extra Small Devices (Phones, less than 400px) */
-@media screen and (max-width: 400px) {
-  .logo {
-    font-size: 1.25rem;
+  .quote-text{
+    font-size: 0.9rem;
   }
-  .title {
-    font-size: 1.5rem;
+
+  .menu-links a{
+    font-size: 1rem;
   }
-  .section__pic-container {
-    width: 100%;
-    height: auto;
-  }
-  .btn-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .nav-links {
-    gap: 0.25rem;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 0.875rem;
+
+  .contact-info-container {
+    width: fit-content;
   }
 }
