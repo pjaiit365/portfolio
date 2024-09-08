@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
             newTab.document.write(`
               <html>
               <head>
-                <title>Flutter App UI Demo</title>
+                <title>Flutter App UI Demo - KNUST Scan</title>
                 <style>
                   body { font-family: Arial, sans-serif; text-align: center; color: #3983C9; }
                   img { max-width: 90%; max-height: 90vh; }
@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </style>
               </head>
               <body>
-                <h1>Flutter App UI Demo - HomeCareX</h1>
+                <h1>Flutter App UI Demo - KNUST Scan</h1>
                 <div class="image-gallery">
                   <div class="nav-arrow" onclick="prevImage()">&#10094;</div>
                   <img id="galleryImage" src="./assets/knust_scan_ui/image (1).png" alt="UI Image">
@@ -346,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
             newTab.document.write(`
               <html>
               <head>
-                <title>Flutter App UI Demo</title>
+                <title>Flutter App UI Demo - G-to-G: Graduands-to-Graduates</title>
                 <style>
                   body { font-family: Arial, sans-serif; text-align: center; color: #3983C9; }
                   img { max-width: 90%; max-height: 90vh; }
@@ -356,7 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </style>
               </head>
               <body>
-                <h1>Flutter App UI Demo - HomeCareX</h1>
+                <h1>Flutter App UI Demo - G-to-G: Graduands-to-Graduates</h1>
                 <div class="image-gallery">
                   <div class="nav-arrow" onclick="prevImage()">&#10094;</div>
                   <img id="galleryImage" src="./assets/g_to_g_ui/image (1).png" alt="UI Image">
